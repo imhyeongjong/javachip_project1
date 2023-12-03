@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+  <mapper namespace="database.REVIEW_mapper">
+  
+  	<select id="loginParking" parameterType="REVIEW" resultType="REVIEW">
+ 		SELECT P_CODE,ID,SUM(R_1) AS R_1 ,SUM(R_2) AS R_2 ,SUM(R_3) AS R_3 ,SUM(R_4) AS R_4 ,SUM(R_5) AS R_5 
+		FROM review
+		WHERE P_CODE=#{P_CODE}
+		group by P_CODE,ID
+ 	</select>
+ 	
+  </mapper>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주차장 등록</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+
+  <div class="login">
+    <div class="login__content">
+      <div class="login__img">
+        <!-- <img src="./주차랑께.png" alt="user login"style="width: 150px;height: 150px; margin: heigth 200px;"> -->
+      </div>
+      <div class="login__forms">
+        
+<!--         회원가입 form -->
+        <form action="PARKING_membership" class="logincar__register" id="login-up" method="post">
+          <h1 class="login__title">주차장 등록</h1>
+          <div class="login__box">
+            <i class='bx bx-user login__icon'></i> 
+            <input type="text" placeholder="주차장명" class="login__input" name="P_PLACE" autocomplete='off'>
+          </div>
+          <!-- 주차장 구분 : 민영 공영인지 -->
+          <div class="login__box">
+            <i class='bx bx-lock login__icon'></i>
+            <input type="text" placeholder="주차장구분(민영공영)" class="login__input" name="P_TYPE" autocomplete='off'>
+          </div>
+
+          <div class="login__box">
+            <i class='bx bx-at login__icon'></i>
+            <input type="text" placeholder="주소" class="login__input" name="P_ADDRESS" autocomplete='off'>
+          </div>
+          
+          <div class="login__box">
+            <i class='bx bx-lock login__icon'></i>
+            <input type="text" placeholder="주차수용대수" class="login__input" name="P_FULL" autocomplete='off'>
+          </div>
+
+          <div class="login__box">
+            <i class='bx bx-lock login__icon'></i>
+            <input type="text" placeholder="시간 당 금액" class="login__input" name="P_PRICE" autocomplete='off'>
+          </div>
+          
+          <div class="login__box">
+            <i class='bx bx-lock login__icon'></i>
+            <input type="text" placeholder="운영시간" class="login__input" name="P_TIME" autocomplete='off'>
+          </div>
+          <div class="login__boxcheck">
+            <ul style="list-style: none;">
+            <li><label for="small" class="chk_box">
+					<input type="checkbox" placeholder="차종" name="P_ABLE" value="소형" id="small" checked="checked" />
+					<span class="on"></span>
+					소형
+				</label></li>
+				<li><label for="middle" class="chk_box">
+					<input type="checkbox" placeholder="차종" name="P_ABLE" value="중형"id="middle" checked="checked" />
+					<span class="on"></span>
+					중형
+				</label></li>
+				<li><label for="big" class="chk_box">
+					<input type="checkbox" placeholder="차종" name="P_ABLE"value="대형"id="big" checked="checked" />
+					<span class="on"></span>
+					대형
+				</label></li>
+				<!--  
+              <li><input type="checkbox" placeholder="차종" name="P_ABLE" value="소형" id="small"/>
+              <label for="small" >소형</label></li>
+              <li><input type="checkbox" placeholder="차종" name="P_ABLE" value="중형"id="middle" />
+              <label for="middle">중형</label></li>
+              <li><input type="checkbox" placeholder="차종" name="P_ABLE" value="대형"id="big" />
+              <label for="big">대형</label></li>
+              -->
+            </ul>
+    		
+          </div>
+          
+          
+          <div class="login__box">
+            <i class='bx bx-lock login__icon'></i>
+            <input type="text" placeholder="상세정보" class="login__input" name="P_INFO" autocomplete='off'>
+          </div>
+          
+          
+          <input type="submit" class="login__buttons btnFloat" value="주차장 등록 완료">
+          
+        </form>
+      </div>
+    </div>
+   </div>
+</body>
+</html>

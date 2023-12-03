@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <!-- MEMBER은 DB로 직접 설정 해주어야함 모르면 maven_Message패키지에 sql보기 -->
+ <mapper namespace="database.MEMBER_mapper">
+ 	<insert id="joinMember" parameterType="MEMBER">
+ 		insert into MEMBER values(#{ID},#{PW},#{NAME},#{TEL},#{CAR_NUM},#{CAR_TYPE})
+ 	</insert>
+ 	
+ 	<select id="loginMember" parameterType="MEMBER" resultType="MEMBER">
+ 		select * from MEMBER where ID=#{ID} and PW=#{PW}
+ 	</select>
+
+	<select id="IDcheck" parameterType="String" resultType="boolean"> 
+	select case when count(*)>0 then 1
+  				else 0
+  			end result
+  	from MEMBER where ID=#{ID}
+  </select>
+	
+	<update id="updateMember" parameterType="MEMBER">
+  	update MEMBER set PW=#{PW}, CAR_NUM=#{CAR_NUM}, CAR_TYPE=#{CAR_TYPE}
+  	where ID=#{ID}
+  </update>
+ </mapper>

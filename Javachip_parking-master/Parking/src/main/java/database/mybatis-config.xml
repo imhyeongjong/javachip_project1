@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<properties resource="database/db.properties"></properties>
+
+<!-- 새로운 SQL을 추가할시 1번 -->
+  <typeAliases>
+  		<typeAlias type="model.MEMBER" alias="MEMBER"/>
+  		<typeAlias type="model.PARKING" alias="PARKING"/>
+ 		<typeAlias type="model.BOOKING" alias="BOOKING"/>
+ 		<typeAlias type="model.REVIEW" alias="REVIEW"/>
+  </typeAliases>
+  
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+
+<!-- 새로운 SQL을 추가할시 2번 -->
+  <mappers>
+    <mapper resource="database/MEMBER_mapper.xml"/>
+    <mapper resource="database/PARKING_mapper.xml"/>
+    <mapper resource="database/BOOKING_mapper.xml"/>
+    <mapper resource="database/REVIEW_mapper.xml"/>
+  </mappers>
+
+</configuration>

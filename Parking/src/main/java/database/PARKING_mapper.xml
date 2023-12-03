@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<!-- 봤던 에러일경우 mapper를 좀 더 보기 --> 
+ <mapper namespace="database.PARKING_mapper">
+ 	<insert id="joinParking" parameterType="PARKING">
+ 		insert into PARKING(P_CODE,P_PLACE,P_TYPE,P_ADDRESS,P_FULL,P_PRICE,P_TIME,P_ABLE,P_INFO,P_YN,P_COUNT,P_POS) values(num_parkingss.nextval,#{P_PLACE},#{P_TYPE},#{P_ADDRESS},#{P_FULL},#{P_PRICE},#{P_TIME}
+ 									,#{P_ABLE},#{P_INFO},#{P_YN, jdbcType=VARCHAR},#{P_COUNT,jdbcType=VARCHAR},#{P_POS, jdbcType=VARCHAR})
+ 	</insert>
+ 	
+ 	<update id="updateParking" parameterType="PARKING">
+ 		update PARKING set P_YN=#{P_YN}, P_COUNT=#{P_COUNT}, P_POS=#{P_POS}
+  	where P_PLACE=#{P_PLACE}
+ 	</update>
+ 	
+ 	<select id="loginParking" parameterType="PARKING" resultType="PARKING">
+ 		select * from PARKING where P_PLACE=#{P_PLACE}
+ 	</select>
+ 	
+ 	<select id="allParking" parameterType="PARKING" resultType="PARKING">
+ 		select * from PARKING 
+ 	</select>
+ 	
+ 	 <select id="mapParking" parameterType="PARKING" resultType="PARKING">
+ 		select * from PARKING where P_PLACE=#{P_PLACE}
+ 	</select>
+ </mapper>

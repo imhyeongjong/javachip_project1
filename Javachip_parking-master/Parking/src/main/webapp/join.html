@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+
+  <div class="login">
+    <div class="login__content">
+     <!--  <div class="login__img">
+        <img src="./주차랑께.png" alt="user login"style="width: 150px;height: 150px; margin: heigth 200px;">
+      </div>--> 
+      <div class="login__forms">
+        
+<!--         회원가입 form -->
+        <form action="MEMBER_membership" class="login__create" id="login-up">
+          <h1 class="login__title">회원가입</h1>
+          <div class="login__box">
+            <i class='bx bx-user login__icon'></i>
+            <input type="text" placeholder="아이디" class="login__input" name="ID" ID="inputE" onchange="checkE()">
+          </div>
+          <span id="resultCheck"></span><br>
+          <div class="login__box">
+            <i class='bx bx-lock login__icon'></i>
+            <input type="text" placeholder="비밀번호" class="login__input" name="PW">
+          </div>
+
+          <div class="login__box">
+            <i class='bx bx-at login__icon'></i>
+            <input type="text" placeholder="이름" class="login__input" name="NAME">
+          </div>
+          
+          <div class="login__box">
+            <i class='bx bx-lock login__icon'></i>
+            <input type="text" placeholder="전화번호" class="login__input" name="TEL">
+          </div>
+
+          <div class="login__box">
+            <i class='bx bx-lock login__icon'></i>
+            <input type="text" placeholder="차량번호" class="login__input" name="CAR_NUM">
+          </div>
+          <br>
+          <div class="login__box" style="display: inline;">
+            <i class='bx bx-lock login__icon'></i>
+            소형 <input type="radio" placeholder="차종" class="login__radio" name="CAR_TYPE" value="소형">
+            중형 <input type="radio" placeholder="차종" class="login__radio" name="CAR_TYPE" value="중형">
+            대형 <input type="radio" placeholder="차종" class="login__radio" name="CAR_TYPE" value="대형">
+            
+          </div>
+          <input type="submit" class="login__buttons btnFloat" value="회원가입">
+          
+          <div>
+            <span class="login__account login__account--account">이미 계정이 있으신가요?</span>
+            <a href="login.html"class="login__signup login__signup--signup" id="sign-in">로그인</a>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+   </div>
+	<script type="text/javascript">
+		function checkE() {
+			var inputE = $('#inputE').val();
+
+			$.ajax({
+				//어디로 요청할 것인지
+				url : 'MEMBER_IDcheckservice',
+				//요청 데이터(json, {key:value})
+				data : {
+					'inputE' : inputE
+				},
+				//요청 방식
+				type : 'get',
+				//요청 성공
+				success : function(data) {
+					if (data == 'true') {
+						$('#resultCheck').text('사용 할 수 없는 아이디')
+						$('#resultCheck').css({
+							"color" : "red"
+						})
+					} else if (data == 'false') {
+						$('#resultCheck').text('사용 할 수 있는 아이디')
+						$('#resultCheck').css({
+							"color" : "green"
+						})
+					}
+				},
+				//요청 실패
+				error : function() {
+					alert("통신실패");
+				}
+			})
+		}
+	</script>
+</body>
+</html>

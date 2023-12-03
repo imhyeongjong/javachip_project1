@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <!--  -->
+  <mapper namespace = "database.PAY_mapper">
+  	<insert id="insertPay" parameterType="PAY">
+  		insert into PAY(A_NUM, B_NUM, A_DATE, A_YN, A_PRICE)
+  		values(NUM_PAY.nextval,NUM_BOOKING.nextval,sysdate,#{A_YN},#{A_PRICE})
+  	</insert>
+  	
+  </mapper>

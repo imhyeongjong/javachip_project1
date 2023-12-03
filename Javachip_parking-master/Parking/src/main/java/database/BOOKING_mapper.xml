@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="database.BOOKING_mapper">
+	<insert id="joinBooking" parameterType="BOOKING">
+		insert into BOOKING(B_NUM,ID,B_DATE,B_EXDATE,B_TIME,B_PLACE,B_PRICE,B_YN,B_EXTIME) values(NUM_BOOKINGS.NEXTVAL,#{ID},sysdate,#{B_EXDATE},#{B_TIME},
+		#{B_PLACE},#{B_PRICE},#{B_YN},#{B_EXTIME})
+	</insert>
+	
+	<!-- 주차장명 입력시 주차장 데이터 가져오기 위한 로그인.. -->
+	<select id="loginParking" parameterType="PARKING" resultType="PARKING">
+ 		select * from PARKING where P_PLACE=#{P_PLACE}
+ 	</select>
+ 	
+ 	<!-- 주차장명 입력시 예약내역 데이터 가져오기 위한 로그인.. -->
+	<select id="loginBooking" parameterType="BOOKING" resultType="BOOKING">
+ 		select * from BOOKING where ID=#{ID}
+ 	</select>
+ 	
+</mapper>

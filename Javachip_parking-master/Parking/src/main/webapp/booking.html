@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>예약 할 주차장명 입력</title>
+<link rel="stylesheet" href="login.css">
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+	<!-- 예약 form -->
+
+	<!-- 아직 주차장 상세 페이지가 구현되지 않아서
+    	지금 임시로 주차장명을 입력하면 그 주차장 정보 불러오게 끔 구현  -->
+
+ <div class="login">
+    <div class="login__content">
+      <div class="login__img">
+        <img src="./resources/img/주차랑께.png" alt="user login">
+      </div>
+      <div class="login__forms">
+        
+        
+<!--        로그인 form -->
+        <form action="./BOOKING_login_time" method="post" class="login__register" id="login-in">
+          <h1 class="login__title">예약할 주차장 명을 입력</h1>
+          <div class="login__box">
+            <i class='bx bx-user login__icon'></i>
+            <input type="text" placeholder="주차장 입력" class="login__input" name="P_PLACE" >
+          </div>
+          
+          <input type="submit" value="제출" class="login__buttons btnFloat" style="cursor: pointer;">
+        </form>
+        
+      </div>
+    </div>
+   </div>
+
+
+</body>
+</html>
