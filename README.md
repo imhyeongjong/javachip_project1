@@ -19,7 +19,7 @@
 | <center><img src="https://github.com/0oc1ock23/Eunsung/assets/145406223/90bcd2a0-0912-4a18-b238-97551dd27ed9.png"  width="170" height="170"/></center> | <img src="https://github.com/0oc1ock23/Eunsung/assets/145406223/d5c3e6e1-83e0-4604-8b4b-4b9aff7bed5c"  width="170" height="120"/> | <img src="https://github.com/0oc1ock23/Eunsung/assets/145406223/bb3ea48d-9e73-45a4-8807-e04d30cad759.png"  width="150" height="150"/> | <img src="https://github.com/0oc1ock23/Eunsung/assets/145406223/93f2a462-ffa8-4606-be58-15b7d0476bd2.png"  width="110" height="150"/> |
 | <b>FRONT, BACK, DB</b> | <b>BACK, CRAWLING</b> | <b>FRONT, UI/UX</b> | <b>BACK, MODELING</b> |
 | 주차장 정보제공, 예약 및 내역확인 기능 구현, 주차장 여유공간 수정 기능 구현, 주차장 위치 마커 표시 구현, 회원가입 및 로그인 주차장 예약 화면 구현, 관리자 페이지 화면 구현 | 주차장 정보 크롤링, 카카오 맵 api 연동, 토스 페이먼츠 결제 api연동 및 구현, 주차장 검색 기능 구현, 주차장 위치 마커 표시 구현 | 주차랑께 화면 UI/UX 설계, 메인 화면 구현, 마이페이지 화면 구현, 지도 마커 커스텀 제작, 로고 이미지 제작, 키워드 후기 선택 화면 구현 | 회원가입 및 로그인 기능 구현, 개인정보 수정 기능 구현, 관리자 주차장 등록 기능 구현, 주차장 예약 기능 구현, 키워드 후기 카운트 구현 |
-|git | [git](https://github.com/0oc1ock23) | git | https://github.com/imhyeongjong |
+|[git](https://github.com/seoyoung430) | [git](https://github.com/0oc1ock23) | [git](https://github.com/sonjiu00) | [git](https://github.com/imhyeongjong)|
 
 </br>
 
